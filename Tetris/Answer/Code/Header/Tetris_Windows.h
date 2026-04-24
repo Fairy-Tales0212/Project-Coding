@@ -16,3 +16,9 @@ void setPos(int x, int y);
 
 ///4.隐藏光标
 void hideCursor();
+
+//5.设置控制台窗口尺寸
+void setConsoleFontToTrueType();
+
+//6.控制台窗口尺寸
+void setConsoleSize(int cols, int lines);

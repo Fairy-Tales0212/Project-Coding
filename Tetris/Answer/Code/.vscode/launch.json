@@ -5,7 +5,7 @@
             "name": "Debug Tetris",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Tetris.exe",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -15,7 +15,6 @@
                 { "name": "CHCP", "value": "65001" }
             ],
             "externalConsole": true,
-            "console": "externalTerminal",
             "MIMode": "gdb",
             "miDebuggerPath": "D:\\MinGW\\bin\\gdb.exe",
             "setupCommands": [

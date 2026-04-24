@@ -8,12 +8,11 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "Source/*.c",
-                "-ID:/Project/Tetris/Answer/Code/Header",
-                // 关键：强制编译器输出 UTF-8 编码
+                "${file}",
+                "-I:D:/Project/Tetris/Answer/Code/Header",
                 "-fexec-charset=UTF-8",
                 "-o",
-                "${workspaceFolder}/Tetris.exe"
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -23,12 +22,12 @@
                     "owner": "gcc",
                     "fileLocation": ["relative", "${workspaceFolder}"],
                     "pattern": {
-                        "regexp": "^(.*?)(:(\\d+):(\\d+))?:\\s+(error|warning|note):\\s+(.*)$",
+                        "regexp": "^(.*?):(\\d+):(\\d+):\\s+(error|warning|note):\\s+(.*)$",
                         "file": 1,
-                        "line": 3,
-                        "column": 4,
-                        "severity": 5,
-                        "message": 6
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
                     }
                 }
             ],
@@ -36,7 +35,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "调试器生成的任务"
+            "detail": "调试器生成的任务：编译当前打开的文件"
         }
     ]
 }

@@ -2,6 +2,7 @@
 
 int main()
 {
-    printf("%2s", "██");
+    printf("Hello world");
+    getchar();
     return 0;
 }

@@ -686,7 +686,7 @@ void endGame()
 
     setPos(33, 5);
     setColor(11);
-    printf("------------------------");
+    printf("----------------+");
 
     for (int i = 6; i <= 24; i++)
     {
@@ -727,9 +727,9 @@ void printStart(int x, int y)
     setPos(x, y + 2);
     printf("    ██       ████████      ████████           ██          ██");
     setPos(x, y + 3);
-    printf("    ██       ██            ██    ██           ██              ██");
+    printf("    ██       ██            ██      ██         ██              ██");
     setPos(x, y + 4); 
-    printf("    ██       ██████████    ██          ██   ██████     ████████");
+    printf("    ██       ██████████    ██        ██   ██████     ████████");
 
 
     setPos(25, 15);
@@ -860,11 +860,14 @@ void gameLoop(float time, int n)
 
 }
 
-//30.游戏初始化
+
+//32.游戏初始化
 void gameInit()
 {
     //句柄初始化
     initHandle();
+    setConsoleSize(90, 30); 
+    setConsoleFontToTrueType();
     
     //打开音乐文件
     //mciSendstring("open alias a", NULL, 0, NULL);
